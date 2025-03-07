@@ -39,14 +39,13 @@ const Login = () => {
     } catch (error) {
       toast.error(error.message)
     }
-
   }
-
-  useEffect(()=> {
-    if (token) {
-      navigate('/')
+  
+  useEffect(() => {
+    if (token && token !== "null" && token !== "undefined") {
+      navigate('/');
     }
-  },[token])
+  }, [token, navigate]);
 
   return (
     <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex items-center' action="">

@@ -30,7 +30,7 @@ const Navbar = () => {
                 <NavLink to='/about'><li className='py-1'>ABOUT</li></NavLink>
                 <NavLink to='/contact'><li className='py-1'>CONTACT</li></NavLink>
                 <a 
-  href='http://localhost:5174' 
+  href='https://hospital-appointment-site-admin.onrender.com/' 
   target='_blank' 
   className='inline-block bg-white text-black-500 px-4 py-0.5 rounded-full hover:bg-blue-500 hover:text-white transition duration-200 border border-black-500'
 >

@@ -13,6 +13,7 @@ import razorpay from 'razorpay'
 const registerUser = async (req, res) => {
     try {
         const { name, email, password } = req.body
+        console.log(name,email,password)
 
         if (!name || !password || !email) {
             return res.json({ success: false, message: "Missing Details" })
@@ -216,57 +217,57 @@ const cancelAppointment = async (req, res) => {
     }
 }
 
-const razorpayInstance = new razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID,
-    key_secret: process.env.RAZORPAY_KEY_SECRET
+// const razorpayInstance = new razorpay({
+//     key_id: process.env.RAZORPAY_KEY_ID,
+//     key_secret: process.env.RAZORPAY_KEY_SECRET
 
-})
+// })
 
-//api to make payment of razorpay
-const paymentRazorpay = async (req, res) => {
-    try {
-        const { appointmentId } = req.body
+// //api to make payment of razorpay
+// const paymentRazorpay = async (req, res) => {
+//     try {
+//         const { appointmentId } = req.body
 
-        const appointmentData = await appointmentModel.findById(appointmentId)
+//         const appointmentData = await appointmentModel.findById(appointmentId)
 
-        if (!appointmentData || appointmentData.cancelled) {
-            return res.json({ success: false, message: "Appointment cancelled or not found." })
-        }
+//         if (!appointmentData || appointmentData.cancelled) {
+//             return res.json({ success: false, message: "Appointment cancelled or not found." })
+//         }
 
-        //creating options for razorpay payment
-        const options = {
-            amount: appointmentData.amount * 100,
-            currency: process.env.CURRENCY,
-            receipt: appointmentId
-        }
-        //creation of an order
-        const order = await razorpayInstance.orders.create(options)
-        res.json({ success: true, order })
+//         //creating options for razorpay payment
+//         const options = {
+//             amount: appointmentData.amount * 100,
+//             currency: process.env.CURRENCY,
+//             receipt: appointmentId
+//         }
+//         //creation of an order
+//         const order = await razorpayInstance.orders.create(options)
+//         res.json({ success: true, order })
 
-    } catch (error) {
-        console.log(error)
-        res.json({ success: false, message: error.message })
-    }
-}
+//     } catch (error) {
+//         console.log(error)
+//         res.json({ success: false, message: error.message })
+//     }
+// }
 
-//Api to verify payment of razorpay
-const verifyRazorpay = async (req,res) =>{
-    try {
-        const {razorpay_order_id} = req.body
-        const orderInfo = await razorpayInstance.orders.fetch(razorpay_order_id)
+// //Api to verify payment of razorpay
+// const verifyRazorpay = async (req,res) =>{
+//     try {
+//         const {razorpay_order_id} = req.body
+//         const orderInfo = await razorpayInstance.orders.fetch(razorpay_order_id)
 
-        // console.log(orderInfo);
-        if(orderInfo.status === 'paid'){
-            await appointmentModel.findByIdAndUpdate(orderInfo.receipt,{payment:true})
-            res.json({success:true,message:"Payment Successful"})
-        }else{
-            res.json({success:false, message:"Payment failed"})
-        }
-    } catch (error) {
-        console.log(error)
-        res.json({ success: false, message: error.message })
-    }
-}
+//         // console.log(orderInfo);
+//         if(orderInfo.status === 'paid'){
+//             await appointmentModel.findByIdAndUpdate(orderInfo.receipt,{payment:true})
+//             res.json({success:true,message:"Payment Successful"})
+//         }else{
+//             res.json({success:false, message:"Payment failed"})
+//         }
+//     } catch (error) {
+//         console.log(error)
+//         res.json({ success: false, message: error.message })
+//     }
+// }
 
 
-export { bookAppointment, cancelAppointment, getProfile, listAppointment, loginUser, registerUser, updateProfile, paymentRazorpay, verifyRazorpay }
+export { bookAppointment, cancelAppointment, getProfile, listAppointment, loginUser, registerUser, updateProfile}

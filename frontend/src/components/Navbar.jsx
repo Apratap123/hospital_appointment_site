@@ -18,6 +18,7 @@ const Navbar = () => {
         localStorage.removeItem('token');
     };
 
+   
     return (
         <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400 '>
             <img onClick={() => navigate('/')} className='w-44 cursor-pointer' src={assets.logo} alt="logo image" />
@@ -28,6 +29,15 @@ const Navbar = () => {
                 <NavLink to='/doctors'><li className='py-1'>ALL DOCTORS</li></NavLink>
                 <NavLink to='/about'><li className='py-1'>ABOUT</li></NavLink>
                 <NavLink to='/contact'><li className='py-1'>CONTACT</li></NavLink>
+                <a 
+  href='http://localhost:5174' 
+  target='_blank' 
+  className='inline-block bg-white text-black-500 px-4 py-0.5 rounded-full hover:bg-blue-500 hover:text-white transition duration-200 border border-black-500'
+>
+  Admin
+</a>
+
+
             </ul>
 
             {/* Account/Login */}

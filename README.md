@@ -69,7 +69,7 @@ The Admin Dashboard offers full system control:
 ## 🔐 **Authentication & Demo Credentials**
 
 ### ✅ **Doctor Login**
-- **Email:** `Andrew@gmail.com`  
+- **Email:** `firstname@gmail.com(Andrew@gmail.com)`  
 - **Password:** `12345678`
 
 ### ✅ **Admin Login**

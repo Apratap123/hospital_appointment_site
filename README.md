@@ -104,5 +104,12 @@ The Admin Dashboard offers full system control:
 
 ---
 
+🙌 Contributing
+
+Contributions and suggestions are always welcome!
+Please open an issue first to discuss major changes.
+
+---
+
 
 

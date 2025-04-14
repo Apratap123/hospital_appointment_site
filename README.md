@@ -25,6 +25,13 @@ A **Full Stack Doctor Appointment Booking System** built using the **MERN Stack*
 ### 🩺 **Doctor Panel**
 Doctors have access to the following functionalities:
 
+
+ ## 🔐 **Authentication & Demo Credentials**
+
+### ✅ **Doctor Login**
+- **Email:** `firstname@gmail.com(Andrew@gmail.com)`  
+- **Password:** `12345678`
+
 #### 🔹 **Dashboard**
 Displays key statistics:
 - 💰 **$66 Earnings**
@@ -39,12 +46,18 @@ Displays key statistics:
 #### 🔹 **Profile**
 - View and update:
   - Name, specialization, availability status, bio, and profile picture  
-- Set availability: ✅ Available / ❌ Not Available  
+- Set availability: ✅ Available / ❌ Not Available
 
 ---
 
 ### 👨‍💼 **Admin Panel**
 The Admin Dashboard offers full system control:
+
+ ## 🔐 **Authentication & Demo Credentials**
+
+### ✅ **Admin Login**
+- **Email:** `Anuj@gmail.com`  
+- **Password:** `Anuj@123`
 
 #### 🔹 **Dashboard**
 - 📊 View overall stats:
@@ -63,20 +76,6 @@ The Admin Dashboard offers full system control:
 #### 🔹 **Doctors List**
 - View a list of registered doctors  
 - Edit or remove any profile  
-
----
-
-## 🔐 **Authentication & Demo Credentials**
-
-### ✅ **Doctor Login**
-- **Email:** `firstname@gmail.com(Andrew@gmail.com)`  
-- **Password:** `12345678`
-
-### ✅ **Admin Login**
-- **Email:** `Anuj@gmail.com`  
-- **Password:** `Anuj@123`
-
-> 🧑‍💻 You can create your own patient account by registering via the user site.
 
 ---
 
@@ -105,10 +104,5 @@ The Admin Dashboard offers full system control:
 
 ---
 
-## 🙌 **Contributing**
-Contributions and suggestions are always welcome!  
-Please open an issue first to discuss major changes.
-
----
 
 

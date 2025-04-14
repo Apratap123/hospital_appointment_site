@@ -1,4 +1,4 @@
-# 🏥 **Doctor Appointment Booking System** – *MERN Stack Full Project*
+# 🏥 **Doctor Appointment Booking System** – *MERN Stack Project*
 
 A **Full Stack Doctor Appointment Booking System** built using the **MERN Stack** *(MongoDB, Express.js, React.js, Node.js)*. This platform facilitates seamless appointment booking between **patients** and **doctors**, with an **admin dashboard** for overall management. It includes **three levels of authentication**, **online payment integration**, and a **responsive design** for smooth user experience.
 

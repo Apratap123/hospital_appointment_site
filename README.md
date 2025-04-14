@@ -105,20 +105,6 @@ The Admin Dashboard offers full system control:
 
 ---
 
-## 📸 **Screenshots**
-
-### 👥 Patient Panel
-![Patient Panel](https://via.placeholder.com/800x400?text=Patient+Panel+Screenshot)
-
-### 👨‍⚕️ Doctor Dashboard
-![Doctor Dashboard](https://via.placeholder.com/800x400?text=Doctor+Panel+Screenshot)
-
-### 🧑‍💼 Admin Dashboard
-![Admin Dashboard](https://via.placeholder.com/800x400?text=Admin+Panel+Screenshot)
-
-> 💡 Replace these images with real screenshots of your application.
----
-
 ## 🙌 **Contributing**
 Contributions and suggestions are always welcome!  
 Please open an issue first to discuss major changes.
